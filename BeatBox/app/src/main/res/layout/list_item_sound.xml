@@ -9,14 +9,23 @@
             type="com.bb.android.beatbox.SoundViewModel" />
     </data>
 
-    <Button
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:background="?android:attr/colorAccent"
-        android:text="@{viewModel.title}"
-        android:onClick="@{() -> viewModel.onButtonClicked()}"
-        tools:text="Sound name" />
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:text="@{viewModel.title}"
+            android:onClick="@{() -> viewModel.onButtonClicked()}"
+            tools:text="Sound name" />
+
+    </FrameLayout>
 
 </layout>
+
+    <!--android:background="?android:attr/colorAccent"-->
 
     <!--style="@style/BeatBoxButton.Strong"-->
